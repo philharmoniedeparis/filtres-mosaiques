@@ -8,6 +8,25 @@ Une entrée peut avoir plusieur catégories, elles doivent être séparées par 
 
 Le fichier est à dupliqué pour chaque mosaïque.
 
+## Chargement des scripts sur getScript.js
+
+Les scripts sont référencés dans le fichier getScript.js avec les lignes suivantes : 
+
+```javascript
+const mosaiques_infos = {
+    lib_url: [
+        `/ui/plug-in/integration/libraries/d3js/d3.v7.min.js`,
+        `/ui/plug-in/integration/mozaicFilter/constructMozaic.js`,
+        `/ui/plug-in/integration/mozaicFilter/custom-select.js`,
+    ],
+    css_url: [
+        `/ui/plug-in/integration/mozaicFilter/mozaicFilter.css`,
+    ],
+    tagId: "#idMozaic"
+}
+loadScripts(mosaiques_infos)
+```
+
 ## Encart HTML mosaique
 
 - Les mosaïques sont appelées par les encarts ci-dessous. Chaque encart correspondt à un type de mosaïque différent.
